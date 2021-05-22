@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  web:
+    build: .
+    image: "maratona-discover-02"
+    command: cd /usr/local/bin/app && npm run dev
+    ports:
+    - "3000:3000"

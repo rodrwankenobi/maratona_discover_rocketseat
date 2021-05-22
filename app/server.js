@@ -2,14 +2,14 @@ const { response } = require("express")
 
 const express = require("express")
 const server = express()
-const routes = require("./routes")
+const routes = require("./src/routes")
 const path = require("path")
 
 // utilizando a template engine
 server.set("view engine","ejs")
 
 // setando o caminho da pasta views
-server.set("views", path.join(__dirname,"views"))
+server.set("views", path.join(__dirname,"src","views"))
 
 // utilizando o req.body
 server.use(express.urlencoded({ extended: true }))
